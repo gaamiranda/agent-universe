@@ -1,0 +1,13 @@
+node_modules
+dist
+server/dist
+server/public
+data/*.db
+data/*.db-*
+.DS_Store
+data/*
+!data/.gitkeep
+# local Claude Code skill installs (not part of the app)
+.claude/
+.agents/
+skills-lock.json

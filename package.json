@@ -1,0 +1,36 @@
+{
+  "name": "agent-universe",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Turns running Claude Code agents into living pixel-art planets.",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:server": "node --no-warnings=ExperimentalWarning --import tsx --watch server/src/index.ts",
+    "dev:client": "vite --config client/vite.config.ts",
+    "build": "tsc -p server/tsconfig.json && vite build --config client/vite.config.ts",
+    "start": "node --no-warnings=ExperimentalWarning server/dist/index.js",
+    "hooks:install": "node scripts/install-hooks.mjs",
+    "hooks:uninstall": "node scripts/install-hooks.mjs --uninstall",
+    "reset": "node scripts/reset.mjs",
+    "typecheck": "tsc -p server/tsconfig.json --noEmit && tsc -p client/tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/silkscreen": "^5.1.0",
+    "@fontsource/vt323": "^5.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=22.13"
+  }
+}
